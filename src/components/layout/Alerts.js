@@ -45,6 +45,7 @@ export class Alerts extends Component {
 
       const mapStateToProps = (state) => ({
         error: state.errors,
+        message: state.messages,
       })
 
 
