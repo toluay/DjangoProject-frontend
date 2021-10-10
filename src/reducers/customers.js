@@ -1,4 +1,5 @@
 import { GET_CUSTOMERS, DELETE_CUSTOMER, ADD_CUSTOMER, CLEAR_CUSTOMERS } from '../actions/types.js';
+
 const initialState = {
     customers: [],
   };
