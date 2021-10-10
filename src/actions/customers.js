@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { GET_CUSTOMERS, DELETE_CUSTOMER, ADD_CUSTOMER, GET_ERRORS } from './types';
+import { createMessage} from './messages';
 
 // GET CUSTOEMRS
 export const getCustomers = () => (dispatch)=>{
@@ -25,7 +26,7 @@ export const deleteCustomer = (id) => (dispatch) => {
   axios
     .delete(`/api/customers/${id}/`)
     .then(() => {
-   
+      dispatch(createMessage({ deleteCustomer: 'Customer Deleted' }));
       dispatch({
         type: DELETE_CUSTOMER,
         payload: id,
