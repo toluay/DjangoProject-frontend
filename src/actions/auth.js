@@ -104,7 +104,7 @@ export const logout = () => (dispatch, getState) => {
     });
 };
 
-// Setup config with token - helper function
+// Setup config with token - helper function to be used in the customer actions 
 export const tokenConfig = (getState) => {
   // Get token from state
   const token = getState().auth.token;
