@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{ Component, Fragment } from 'react';
 
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 
@@ -35,7 +35,7 @@ const alertOptions = {
       store.dispatch(loadUser());
     }
 
-render(){
+render(){return(
     <Provider store={store}>
           <AlertProvider template={AlertTemplate} {...alertOptions}>
           <Router>
@@ -59,7 +59,7 @@ render(){
    
  </Router>
   </AlertProvider>
-  </Provider>
+  </Provider>)
 }
   }
   export default App; 
