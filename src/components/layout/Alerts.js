@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withAlert } from 'react-alert';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 export class Alerts extends Component {
@@ -13,7 +14,7 @@ export class Alerts extends Component {
 
 
         componentDidUpdate(prevProps) {
-            const { error} = this.props;
+            const { error, alert ,message} = this.props;
 
             if (error !== prevProps.error) {
                 alert.error('there is an error ');
