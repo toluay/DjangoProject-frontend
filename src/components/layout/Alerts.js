@@ -7,7 +7,9 @@ export class Alerts extends Component {
 
 
     static propTypes = {
-        error: PropTypes.object.isRequired,};
+        error: PropTypes.object.isRequired,
+        message: PropTypes.object.isRequired,
+    };
 
 
         componentDidUpdate(prevProps) {
@@ -19,7 +21,12 @@ export class Alerts extends Component {
                 if (error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
                 if (error.msg.message) alert.error(`Message: ${error.msg.message.join()}`);
             }
-            
+            if (message !== prevProps.message) {
+                if (message.deleteCustomer) alert.success(message.deleteCustomer);
+                if (message.addCustomer) alert.success(message.addCustomer);
+                if (message.passwordNotMatch) alert.error(message.passwordNotMatch);
+              }
+
         }
 
         

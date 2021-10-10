@@ -40,7 +40,7 @@ export const addCustomer = (customer) => (dispatch) => {
     axios
       .post('/api/customers/', customer)
       .then((res) => {
-        
+        dispatch(createMessage({ addCustomer: 'Customer Added' }));
         dispatch({
           type: ADD_CUSTOMER,
           payload: res.data,
