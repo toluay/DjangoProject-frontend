@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_CUSTOMERS, DELETE_CUSTOMER, ADD_CUSTOMER, GET_ERRORS } from './types';
+import { GET_CUSTOMERS, DELETE_CUSTOMER, ADD_CUSTOMER } from './types';
 import { createMessage ,  returnErrors} from './messages';
 import { tokenConfig } from './auth';
 
